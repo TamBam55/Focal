@@ -1,4 +1,4 @@
-/*const findWaldo = function(names, found) {
+const findWaldo = function(names, found) {
   for (let i = 0; i < names.length; i++) {
     //let name = names[i];
     if (names[i] === "Waldo") {
@@ -12,7 +12,7 @@ const actionWhenFound = function(i) {
   console.log("Found Waldo at index " + i + "!");
 }
 
-findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);*/
+findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
 
 //Ex 2
 
@@ -32,13 +32,13 @@ findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
 
 //Ex 3
 
-// findWaldo = (names, found) => {
-//   names.forEach((item, index) => {
-//     if (item === "Waldo") {
-//       found(index); // execute callback
-//     }
-//   });
-// };
-// findWaldo(["Alice", "Bob", "Waldo", "Winston"], index => {
-//   console.log("Found Waldo at index " + index + "!");
-// });
+findWaldo = (names, found) => {
+  names.forEach((item, index) => {
+    if (item === "Waldo") {
+      found(index); // execute callback
+    }
+  });
+};
+findWaldo(["Alice", "Bob", "Waldo", "Winston"], index => {
+  console.log("Found Waldo at index " + index + "!");
+});
